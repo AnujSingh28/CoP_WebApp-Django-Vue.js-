@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+{% load static %}
+{% load render_bundle from webpack_loader %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport">
+        <title>Chamber of Product</title>
+        <link rel="stylesheet" href= {% static 'style.css' %}>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <!--  -->
+    <body>
+        <section class="section1"> <!-- Navigation Bar of Page-->
+          <div class="navBar">
+           <nav>
+            <ul class='navList'>
+             <li><a class="home" src="#">Home</a></li>
+             <li><a class="buy" src="#">Buy</a></li>
+             <li><a class="contactUs" src="#">Contact Us</a></li>
+             <li><a id="postPropertiesForFree" src="#">Post Properties for Free</a></li>
+             <li><a class="loginOrSignup" src="#">Login/Signup</a></li>
+            </ul>
+           <nav>
+          </div>
+        </section>
+        <br></br>
+        <section class='section2'>
+            <img class="backGroundImage" src="src/assets/backGroundImage.png" alt="Beautiful Home">
+        </section>
+        <section class="section3">
+          <div class="blueSearchBox">
+            <div class="blueRectangle">
+              <p class="findYourDreamProperties">FIND YOUR DREAM PROPERTIES</p>
+              <p class="searchPropertiesForSaleInIndia">Search properties for sale in India</p>
+              <div class="search">
+                   <input type="text" class="searchTerm" placeholder="Search your properties here">
+                   <button type="submit" class="searchButton">
+                       <i class="fa fa-search fa-2x"></i>
+                   </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section> <!--Featured Properties and Recently added section-->
+            <div id="app1"></div>
+            <div id="app2"></div>
+        </section>
+
+        <section class='section5'>
+                 <h1><b>Two Ways to get started</b></h1>
+                 <div class='profile'>
+                  <div class='createProfile'><!--This is for creating a new profile-->
+                       <h2>1.Create your own profile</h2>
+                       <p>Answer a few short questions to activate a customized dashboard and property recommendations based on your investor profile.</p>
+                       <div class='buttonDesignAlign'>
+                        <button type="button" class='buttonStyle'>
+                           <h3>Create now</h3>
+                         </button>
+                       </div><!--Click on this button to redirect to account creation-->
+                  </div>
+                  <div class='speakWithExpert'><!--This is for talkig to an expert -->
+                       <h2>2.Speak with an expert &nbsp;&nbsp;</h2>
+                       <p>Talk with our expert team for a complimentary strategy session or to answer any questions you may have.</p>
+                       <div class="buttonDesignAlign" >
+                         <div>
+                          <h3 class='scheduleCallButton' @click:>Schedule a call<b> >> </b></h3> <!--click ontext funtionality will be added to redirect to details for calling an expert-->
+                       	</div>
+                       </div>
+                  </div>
+                 </div>
+                 <hr>
+                 <div class='buying'><!--This is for buying a property-->
+                       <div class="lookingForHouseImage">
+                            <img src="src/assets/lookingForHouse.png" alt="lookingForHouse" class='lookingForHouse'>
+                       </div>
+                       <div class="lookingForHouseText">
+                         <h2>Looking for a house?</h2><br>
+                         <p>With over 1 million+ homes for sale available on the website, COP can match you with a house you will want to call home.</p>
+                         <div class="buttonDesignAlign">
+                           <button type="button" class='buttonStyle'><h3>Buy Now</h3></button><!--Click to redirect to buying section-->
+                         </div>
+                       </div>
+                 </div>
+                 <hr>
+                 <div class='selling'><!--This is for selling a property-->
+                       <div class="sellingHouseText">
+                         <h2>Sell properties for the best prices</h2>
+                         <br><p>Sell your properties for best prices for our thousands of users. Sell your properties in minimum time.</p>
+                         <div class="buttonDesignAlign">
+                           <button type="button" class='buttonStyle'> <h3>Sell now</h3> </button><!--Click to redirect to selling section-->
+                         </div>
+                       </div>
+                       <div class="sellingHouseImage">
+                         <img src="src/assets/homeForSale.png" alt="homeForSale" class='sellingHouse'>
+                       </div>
+                 </div>
+                 <hr>
+                 <h1>What makes us the preferred choice</h1>
+                 <div class='copPreferringPoints'><!--This provide the details about us-->
+                     <span class="block maximumChoice">
+                       <svg class="blockImg" viewBox="3 3 92.2 84.277">
+                           <path fill="rgba(194,50,50,0.38)" d="M 64.46633148193359 59.18492126464844 L 2.999999761581421 59.18492126464844 L 2.999999761581421 68.54907989501953 L 64.46633148193359 68.54907989501953 L 64.46633148193359 59.18492126464844 L 64.46633148193359 59.18492126464844 Z M 64.46633148193359 21.72830581665039 L 2.999999761581421 21.72830581665039 L 2.999999761581421 31.09246063232422 L 64.46633148193359 31.09246063232422 L 64.46633148193359 21.72830581665039 L 64.46633148193359 21.72830581665039 Z M 2.999999761581421 49.82077026367188 L 95.19950866699219 49.82077026367188 L 95.19950866699219 40.45661544799805 L 2.999999761581421 40.45661544799805 L 2.999999761581421 49.82077026367188 L 2.999999761581421 49.82077026367188 Z M 2.999999761581421 87.27738189697266 L 95.19950866699219 87.27738189697266 L 95.19950866699219 77.91323089599609 L 2.999999761581421 77.91323089599609 L 2.999999761581421 87.27738189697266 L 2.999999761581421 87.27738189697266 Z M 2.999999761581421 2.999996185302734 L 2.999999761581421 12.3641529083252 L 95.19950866699219 12.3641529083252 L 95.19950866699219 2.999996185302734 L 2.999999761581421 2.999996185302734 L 2.999999761581421 2.999996185302734 Z">
+                            </path>
+                          </svg>
+                       <h3>Maximum Choice</h3>
+                       <p>1 lac+ and still counting new properties every hours to help the buyer to find their right home</p>
+                      </span>
+                     <span class="block buyersTrustUs">
+                       <svg class="blockImg" viewBox="3 5 95.801 77.432">
+                            <path fill="rgba(213,75,75,1)" d="M 50.90029907226563 19.51855278015137 C 47.33438873291016 11.13650894165039 37.34451675415039 5 26.95014953613281 5 C 13.41565322875977 5 3 14.34994888305664 3 26.77782821655273 C 3 43.85648727416992 23.18731689453125 57.06352996826172 50.90029907226563 82.43228149414063 C 78.61328887939453 57.06352996826172 98.80060577392578 43.85648727416992 98.80060577392578 26.77782821655273 C 98.80060577392578 14.34994888305664 88.38494110107422 5 74.85045623779297 5 C 64.44544219970703 5 54.46621322631836 11.13650894165039 50.90029907226563 19.51855278015137 Z">
+                 				  	</path>
+                          </svg>
+                       <h3>Buyers trust us</h3>
+                       <p>5 million user visit us for theirbuying needs</p>
+                      </span>
+                     <span class="block sellersPreferUs">
+                       <svg class="blockImg" viewBox="661.8 271.5 119.861 84.939">
+                            <path fill="rgba(246,154,154,1)"  d="M 661.8001098632813 356.4390258789063 L 683.7389526367188 356.4390258789063 L 683.7389526367188 305.3918762207031 L 661.8001098632813 305.3918762207031 L 661.8001098632813 356.4390258789063 Z M 781.6613159179688 309.576171875 C 781.6613159179688 304.9735717773438 776.8452758789063 301.207763671875 770.959228515625 301.207763671875 L 736.7132568359375 301.207763671875 L 742.0642700195313 281.9604797363281 C 742.0642700195313 281.5420837402344 742.0642700195313 281.1235656738281 742.0642700195313 280.7052612304688 C 742.0642700195313 279.0316467285156 740.9938354492188 277.3579711914063 739.9237670898438 276.1026611328125 L 734.0377197265625 271.4999694824219 L 698.1865234375 299.5341491699219 C 696.0460205078125 301.207763671875 694.9759521484375 303.2998657226563 694.9759521484375 305.3919677734375 L 694.9759521484375 347.65234375 C 694.9759521484375 352.2550048828125 699.7919921875 356.0207214355469 705.677734375 356.0207214355469 L 754.37109375 356.0207214355469 C 758.6520385742188 356.0207214355469 762.9326782226563 353.9286499023438 764.5380859375 350.9996032714844 L 781.1259765625 321.2918701171875 C 781.6609497070313 320.4549560546875 781.6609497070313 319.1997680664063 781.6609497070313 318.3628845214844 L 781.6609497070313 309.576171875 L 781.6613159179688 309.576171875 L 781.6613159179688 309.576171875 Z">
+                 					  </path>
+                          </svg>
+                       <h3>Seller prefered us</h3>
+                       <p>10 thousand + properties posted every day in our website, making us the biggest platform to sell the properties</p>
+                      </span>
+                     <span class="block expertGuidance">
+                       <svg class="blockImg" viewBox="0.999 4.999 118.712 80.298">
+                             <path fill="rgba(222,63,63,1)" d="M 38.77645874023438 50.88913726806641 C 26.18756675720215 50.88913726806641 0.9990020394325256 57.58252716064453 0.9990020394325256 70.96356964111328 L 0.9990020394325256 85.29672241210938 L 76.54850769042969 85.29672241210938 L 76.54850769042969 70.96356964111328 C 76.54850769042969 57.58252716064453 51.3707389831543 50.88913726806641 38.77645874023438 50.88913726806641 M 81.94989776611328 50.88913726806641 C 80.37967681884766 50.88913726806641 78.62057495117188 50.99238204956055 76.73737335205078 51.1988639831543 C 82.98594665527344 56.00525283813477 87.34052276611328 62.45774841308594 87.34052276611328 70.96356964111328 L 87.34052276611328 85.29672241210938 L 119.711181640625 85.29672241210938 L 119.711181640625 70.96356964111328 C 119.711181640625 57.58252716064453 94.53880310058594 50.88913726806641 81.94989776611328 50.88913726806641 M 38.77645874023438 4.99899959564209 C 29.84066581726074 4.99899959564209 22.58842849731445 12.71331787109375 22.58842849731445 22.21138381958008 C 22.58842849731445 31.7094612121582 29.84066581726074 39.41803741455078 38.77645874023438 39.41803741455078 C 47.7176399230957 39.41803741455078 54.91591644287109 31.7094612121582 54.91591644287109 22.21138381958008 C 54.91591644287109 12.71331787109375 47.7176399230957 4.99899959564209 38.77645874023438 4.99899959564209 M 81.94989776611328 4.99899959564209 C 73.00332641601563 4.99899959564209 65.75650024414063 12.71331787109375 65.75650024414063 22.21138381958008 C 65.75650024414063 31.7094612121582 73.00332641601563 39.41803741455078 81.94989776611328 39.41803741455078 C 90.88570404052734 39.41803741455078 98.07857513427734 31.7094612121582 98.07857513427734 22.21138381958008 C 98.07857513427734 12.71331787109375 90.88570404052734 4.99899959564209 81.94989776611328 4.99899959564209">
+                 				  	</path>
+                          </svg>
+                       <h3>Expert guidance</h3>
+                       <p>Advice from the largest panel of industry experts to make smart property decisions</p>
+                      </span>
+                   </div>
+                 <hr>
+                 <div class="guides">
+                   <div class='copGuide'><!--This contains the total guidance link-->
+                       <h2> <b>COP Guide</b> </h2>
+                       <p>Every Thing you need to know when you are looking at different type of homes to buy and sell at one place</p>
+                       <div class="buttonDesignAlign">
+                         <button type="button" class='buttonStyle'> <h3>See all Guides</h3> </button><!--This redirects to provide the compleete guidance for both buyer and seller-->
+                       </div>
+                   </div>
+                   <div class='copGuides'><!--This provide the guidance for the buyer-->
+                       <div class='copBuyerGuide'>
+                         <img src="src/assets/buyerGuide.png" alt="buyersGuideImage" class='copBuyerGuideImage'>
+                         <div class="copBuyerGuideText">
+                           <h3>Buyer Guides</h3>
+                           <p>How to buy <span><a href="#"> >> </a></span></p> <!--Click will be linked to arrow image for funtionality to redirect to buyer guidance-->
+                         </div>
+                       </div>
+                       <br>
+                       <div class='copSellerGuide'><!--This provide the guidance for the seller-->
+                         <img src="src/assets/sellerGuide.png" alt="sllersGuideImage" class='copSellerGuideImage'>
+                         <div class="copSellerGuideText">
+                           <h3>Seller Guides</h3>
+                           <p>How to sell <span><a href="#"> >> </a></span></p> <!--Click will be linked to arrow image for funtionality to redirect to seller guidance-->
+
+                         </div>
+                       </div>
+                    </div>
+                 </div>
+        </section>
+        <div class="section6"> <!-- Section6 -->
+
+            <div class="section6-container">
+              <div class="container" >
+                <div class="rating-heading">
+                <span><b>Rating and reviews</b></span>
+                </div>
+
+                <div class="flex-container">
+
+                    <div class="left-half">
+                      <div class="rating">
+                      <h1> <b>4.5</b> </h1>
+                      </div>
+                      <div class="stars">  <!-- Stars Rating -->
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star-half checked"></span>
+                      </div>
+
+                    </div> <!--END OF LEFT HALF  -->
+
+                    <div class="right-half">  <!--Start of Right Half -->
+                        <div class="row"> <!--5 star bar -->
+                          <div class="side">
+                            <div class="font">5 star</div>
+                          </div>
+                          <div class="right">
+                            <div class="bar-container">
+                              <div class="bar-5"></div>
+                            </div>
+                          </div>
+                        </div> <!--5 star bar -->
+
+                        <div class="row"><!--4 star bar -->
+                           <div class="side">
+                              <div class="font">4 star</div>
+                           </div>
+                            <div class="right">
+                              <div class="bar-container">
+                                <div class="bar-4"></div>
+                              </div>
+                            </div>
+                        </div>  <!--4 star bar -->
+
+                       <div class="row"> <!--3 star bar -->
+                        <div class="side">
+                          <div class="font">3 star</div>
+                        </div>
+                        <div class="right">
+                          <div class="bar-container">
+                            <div class="bar-3"></div>
+                          </div>
+                        </div>
+                       </div> <!--3 star bar -->
+
+                       <div class="row"> <!--2 star bar -->
+                        <div class="side">
+                          <div class="font">2 star</div>
+                        </div>
+                        <div class="right">
+                          <div class="bar-container">
+                            <div class="bar-2"></div>
+                          </div>
+                        </div>
+                       </div> <!--2 star bar -->
+
+                       <div class="row"> <!--1 star bar -->
+                        <div class="side">
+                          <div class="font">1 star</div>
+                        </div>
+                        <div class="right">
+                          <div class="bar-container">
+                            <div class="bar-1"></div>
+                          </div>
+                        </div>
+                       </div> <!--1 star bar -->
+
+                    </div>
+                </div>  <!--END OF right-half <div > contains chart -->
+              </div>
+
+              <div id="back_of_reviews">
+                <div id="Users_Love_Us">
+                  Users Love Us
+                </div>
+
+                <div id="slider">
+                  <div>
+                    <span>
+                      <div class=" review ">
+                        <p class="review_text">
+
+                        </p>
+                      </div>
+                    </span>
+                    <div class="reviewer">
+                      <div >
+                        <img class="image_of_reviewer" v-bind:src="list[i].img_reviewer" alt="image_selena">
+                      </div>
+                      <div class="name_of_reviewer">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="left_review" @click="left()">&#10094;</button>
+                  <button class="right_review" @click="right()">&#10095;</button>
+                </div>
+
+              </div>
+              </div>
+
+
+            </div>
+        </div>
+        <footer class='footer'><!--while dealing with footer check the xd file there are some unnecessary breaks,we have to make the footer look good by removing those breaks-->
+             <div class='realEstateInIndia'><!-- while dealing with this list ensure that list elements -city names- come in two columns-->
+                  <h4 >REAL ESTATE IN INDIA</h4>
+                  <div class="cityNames">
+                    <ul class="cityNamesList1">
+                       <li><a src="" rel="nofollow">Delhi/NCR</a></li>
+                       <li><a src="" rel="nofollow">Bangalore</a></li>
+                       <li><a src="" rel="nofollow">Hyderabad</a></li>
+                       <li><a src="" rel="nofollow">Kolkata</a></li>
+                       <li><a src="" rel="nofollow">Chandigarh</a></li>
+                       <li><a src="" rel="nofollow">Nagpur</a></li>
+                    </ul>
+                    <ul class="cityNamesList2">
+                       <li><a src="" rel="nofollow">Mumbai</a></li>
+                       <li><a src="" rel="nofollow">Chennai</a></li>
+                       <li><a src="" rel="nofollow">Pune</a></li>
+                       <li><a src="" rel="nofollow">Ahmedabad</a></li>
+                       <li><a src="" rel="nofollow">Jaipur</a></li>
+                       <li><a src="" rel="nofollow">Bhubaneswar</a></li>
+                     </ul>
+                    </div>
+                  </div>
+              <div class='chamberOfProduct'>
+                 <h4 class=""><b> CHAMBER OF PRODUCT</b></h4>
+                 <h5 class="">LINKS</h5>
+                 <div class="copLinks">
+                   <ul class="">
+                     <li><a src="" rel="nofollow">Mobile Apps</a></li>
+                     <li><a src="" rel="nofollow">National Home</a></li>
+                     <li><a src="" rel="nofollow">Buy our Services</a></li>
+                     <li><a src="" rel="nofollow">Residential property</a></li>
+                     <li><a src="" rel="nofollow">Commercial Property</a></li>
+                   </ul>
+                 </div>
+              </div>
+              <div class='company'>
+                 <h4 class="">COMPANY</h4>
+                 <div class="copData">
+                   <ul class="copDataList">
+                     <li><a src="" rel="nofollow">About Us</a></li>
+                     <li><a src="" rel="nofollow">Contact Us</a></li>
+                     <li><a src="" rel="nofollow">Careers with Us</a></li>
+                     <li><a src="" rel="nofollow">Terms &amp; Conditions</a></li>
+                     <li><a src="" rel="nofollow">Request Info</a></li>
+                     <li><a src="" rel="nofollow">Feedback</a></li>
+                     <li><a src="" rel="nofollow">Report a Problem</a></li>
+                   </ul>
+                 </div>
+               </div>
+              <div class='contactUs'>
+                  <h4 class="">CONTACT US</h4>
+                  <div class="contactData">
+                    <ul class="contactDataList">
+                      <li><p>Toll Free: 91 XXXXXXXXXX</p></li>
+                      <li><p>Monday-Saturday(9AM to 6PM IST)</p></li>
+                      <li><p>Email: xxxx@cop.com</p></li>
+                    </ul>
+                  </div>
+                </div>
+              <div class='connectWithUs'>
+                 <h4 class="">CONNECT WITH US</h4>
+                 <ul>
+                  <li>
+                    <a href="https://www.facebook.com/chamberofproduct" title="Facebook">
+                      <img height="" alt="Like us on Facebook" src="src/assets/facebook.png" class="footerImg">
+                    </a>
+                  </li><!-- I have not found the link for youtube channel of cop XD-->
+                  <li>
+                    <a href="" title="Youtube">
+                      <img alt="Subscribe us on YouTube" src="src/assets/youtube.png" class="footerImg">
+                    </a>
+                  <li><!-- I have not found the link for twitter of cop XD-->
+                    <a href="" title="Twitter">
+                      <img alt="Follow us on Twitter" src="src/assets/twitter.png" class="footerImg">
+                    </a>
+                  </li>
+                </ul>
+               </div>
+        </footer>
+        <!-- <script src="/dist/build.js"></script> -->
+    </body>
+    
+</html>
